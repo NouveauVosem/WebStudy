@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11-Exercises</title>
+  </head>
+  <body>
+    <script>
+      const Nums = [10,20,30,40,50];
+      //Nums[40] = 99;
+
+      getLastValue(Nums);
+      arraySwap(Nums);
+      //arrayReverse(Nums);
+      //addArrays(Nums, [60,70,80]);
+
+      function getLastValue(array){
+        lastIndex = array.length - 1;
+        lastValue = array[lastIndex];
+        console.log(lastValue);
+        return lastValue;
+      };
+
+      function arraySwap(array){
+        firstValue = array[0];
+        lastValue = array[array.length-1];
+
+        const arraySwap = array;
+        arraySwap[0] = lastValue;
+        arraySwap[array.length-1] = firstValue;
+        console.log(arraySwap);
+      }
+
+      function arrayReverse(array){
+        let reversedArray = [];
+        console.log(arrayReverse.length);
+        let ir = 0;
+        for (i=array.length-1; i >= 0; i--) {
+          reversedArray[ir] = array[i];
+          ir ++;
+        }
+        console.log(reversedArray);
+        return reversedArray;
+      }
+
+      function addArrays(array1,array2) {
+        for (var i = 0; i<=array1.length; i++) {
+          array1[i] += array2[i];
+          console.log(array1);
+      }
+      };
+    </script>
+  </body>
+</html>
