@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11-Exercises</title>
+  </head>
+  <body>
+    <script>
+
+      for (let num = 0; num <= 10; num += 2) {
+        console.log(num);
+      }
+
+      for (let num = 5; num >= 0; num -= 1) {
+        console.log(num);
+      }
+
+      let i = 0;
+
+      while (i < 10) {
+        i += 2;
+        console.log(i);
+      }
+
+      let j = 5;
+
+      while (j >= 0) {
+        console.log(j);
+        j -= 1;
+      }
+
+      let array = [1,2,3];
+      let array2 = [];
+      let array3 = [10,20,30,40,50];
+      let array4 = [1,2,3,4,5];
+      let array5 = [1,2,3,4,5,6,7,8,9,10];
+
+      for (let i = 0; i < array.length; i += 1) {
+        array2.push(array[i]+1);
+        console.log(array2);
+      }
+
+      addOne(array3);
+      function addOne(array) {
+
+        for (let i = 0; i < array.length; i++) {
+          array[i] += 1;
+          }
+        console.log(array);
+      }
+
+
+      addNum(array3, 7);
+      function addNum(array,num) {
+        for (let i = 0; i < array.length; i++) {
+          array[i] += num;
+        }
+        console.log(array)
+      }
+
+      addArrays(array4,array5)
+      function addArrays(array1,array2) {
+
+        let result = [];
+        let maxRange = Math.max(array1.length, array2.length);
+
+        for (let i = 0; i < maxRange; i++) {
+          let value1 = array1[i] !== undefined ? array1[i] : 0;
+          let value2 = array2[i] !== undefined ? array2[i] : 0;
+          result.push(value1 + value2);
+        }
+        console.log(result);
+        return result;
+      }
+
+      let nums1 = [1,-2,3,-4,5]
+      countPositive(nums1);
+      function countPositive(nums) {
+        let positive = 0;
+
+        for (let i = 0; i < nums.length; i++) {
+
+          if (nums[i] > 0) {
+            positive ++;
+          }
+          console.log(positive);
+        }
+        
+      }
+    </script>
+  </body>
+</html>

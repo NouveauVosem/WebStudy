@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11 Array Exercises 3</title>
+  </head>
+  <body>
+    <script>
+
+      let nums1 = [1, -2, 3, 4, 5]
+      let nums2 = []
+
+      minMax(nums2)
+      
+      function minMax(nums) {
+
+        let min = nums[0];
+        let max = nums[0];
+        for (var i = 0; i < nums.length; i++) {
+          if (nums[i]>max) {
+            max = nums[i];
+          } else if (nums[i]<min) {
+            min = nums[i];
+          } 
+        }
+        if (min === undefined) {
+            min = null;
+          };
+        if (max === undefined) {
+            max = null;
+          }
+        console.log(`Min: ${min}, Max: ${max}`)
+      }
+
+    </script>
+  </body>
+</html>
