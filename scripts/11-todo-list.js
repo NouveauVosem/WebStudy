@@ -14,13 +14,13 @@ function renderTodoList() {
     //const dueDate = todoObject.dueDate;
     const { name, dueDate } = todoObject; // shortcut
     const html = `
-      <p>
-      ${name} ${dueDate}
+      <div>${name}</div>
+      <div>${dueDate}</div>
       <button onclick="
         todoList.splice(${i}, 1);
         renderTodoList();
-      ">Delete</button>
-      </p>
+      " class="delete-todo-button">Delete</button>
+      
     `;
     todoListHTML += html;
   }
