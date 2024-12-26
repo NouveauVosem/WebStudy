@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12-Exercises</title>
+  </head>
+  <body>
+
+    <button onclick="
+        Finisher()
+      " class="js-button">Start</button> <br/> <br/>
+    <button onclick="
+        showAdded()
+      " class="js-button-add-to-cart">Add to cart</button>
+    <p class="feedback"></p>
+
+    <script>
+
+      let timeoutID
+
+      function showAdded() {
+        document.querySelector('.feedback').innerHTML = 'Added';
+        clearInterval(timeoutID);
+        timeoutID = setTimeout(function() {
+          document.querySelector('.feedback').innerHTML = '';
+        },2000)
+      }
+
+      function Finisher() {
+        document.querySelector('.js-button').innerHTML = 'Loading...';
+        setTimeout(function(){
+          document.querySelector('.js-button').innerHTML = 'Finished!';
+        }, 1000)
+      }
+
+      var add = function() {
+        console.log(2+3);
+      }
+
+      function runTwice(fun) {
+      fun ();
+      fun ();
+      };
+
+      runTwice(add);
+    </script>
+  </body>
+</html>
